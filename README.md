@@ -1,4 +1,4 @@
-# tinytunes🎧
+# TinyTunes🎧
 
 A tiny playlist app for collecting cover songs.
 
