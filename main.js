@@ -1,8 +1,1 @@
-<html>
-  <head>
-  <script type="text/javascript">
-  </script>
-  </head>
-<body>
-  </body>
-  </html>
+console.log("tinytunes-cover start");
