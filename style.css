@@ -67,6 +67,26 @@ body {
   background-color: #e6e1d9;
 }
 
+.song-list {
+  list-style: none;
+  padding: 0;
+}
+
+.song-item {
+  background: #faf7f2;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.song-item p {
+  margin-bottom: 6px;
+}
+
+.song-item a {
+  font-size: 0.85rem;
+}
+
 .hidden {
   display: none;
 }
