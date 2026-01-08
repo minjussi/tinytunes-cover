@@ -17,21 +17,23 @@ saveBtn.addEventListener("click", () => {
   console.log(title, singer, link);
 });
 
-const playlist = document.querySelector(".playlist");
+const list = document.querySelector(".song-list");
+const emptyText = document.querySelector(".empty");
 
 saveBtn.addEventListener("click", () => {
   const title = document.querySelector("#title").value;
   const singer = document.querySelector("#singer").value;
   const link = document.querySelector("#link").value;
-  const item = document.createElement("div");
+
+  const item = document.createElement("li");
+  item.classList.add("song-item");
+
   item.innerHTML = `
     <p><strong>${title}</strong> – ${singer}</p>
     <a href="${link}" target="_blank">listen</a>
   `;
-  playlist.appendChild(item);
-  form.classList.add("hidden");
-  document.querySelector("#title").value = "";
-  document.querySelector("#singer").value = "";
-  document.querySelector("#link").value = "";
+
+  list.appendChild(item);
+  emptyText.style.display = "none";
 });
 
