@@ -1,11 +1,5 @@
 console.log("tinytunes-cover start");
 
-function getYoutubeId(url) {
-  const regExp = /(?:youtube\.com\/.*v=|youtu\.be\/)([^&]+)/;
-  const match = url.match(regExp);
-  return match ? match[1] : null;
-}
-
 const addBtn = document.querySelector(".add-btn");
 const form = document.querySelector(".form");
 
@@ -32,18 +26,12 @@ saveBtn.addEventListener("click", () => {
   const item = document.createElement("div");
   item.classList.add("song-item");
 
-  const videoId = getYoutubeId(link);
-  const thumbnail = videoId
-    ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-    : "";
-
   item.innerHTML = `
     <p><strong>${title}</strong> – ${singer}</p>
     <a href="${link}" target="_blank">listen</a>
   `;
   
   playlist.appendChild(item);
-
   emptyText.style.display = "none";
   
   form.classList.add("hidden");
